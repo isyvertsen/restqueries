@@ -1,0 +1,180 @@
+Post http://localhost:60098/CustomerService.asmx
+Accept: */*
+Accept-encoding: gzip, deflate, br
+Cache-control: no-cache
+Connection: keep-alive
+Content-length: 16327
+Content-Type: application/soap+xml; charset=utf-8
+Host: localhost:60098
+Postman-token: d471c58f-530d-4970-af5a-9d741b5daed5
+Soapaction: http://www.spn.no/webservices/PredatorPersonService/ImportCasesByProxy
+User-agent: PostmanRuntime/7.29.2
+
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:pred="http://www.spn.no/webservices/PredatorPersonService"
+    xmlns:cas="http://www.spn.no/webservice/caseImport">
+    <soapenv:Header />
+    <soapenv:Body>
+        <pred:ImportCasesByProxy >
+            <cas:caseImport>
+                <cas:ImportParams Version="2" />
+                <cas:CaseCollectionSet>
+                    <!--One or more repetitions:-->
+                    <cas:CaseCollection>
+                        <cas:MainCase>
+                            <cas:Case>
+                                <cas:CaseInfo>
+                                    <!--Optional:-->
+                                    <!-- <cas:CustomerRefNoSecondary></cas:CustomerRefNoSecondary> -->
+                                    <!--Optional:-->
+                                    <cas:CustomerRefNoPrimary>12345678ACBD5</cas:CustomerRefNoPrimary>
+                                    <!--This is normally the debtors customernumber at the customer of the debt collection agency -->
+                                    <!--Optional:-->
+                                    <cas:DemandTypePrimary>Unsecured</cas:DemandTypePrimary>
+                                    <!-- This can be Secured, Unsecured etc, normally Unsecured -->
+                                    <!--Optional:-->
+                                    <cas:StartDate>2021-08-14</cas:StartDate>
+                                    <!--Optional:-->
+                                    <cas:Product>CmsDomesticPreLegal</cas:Product>
+                                    <!-- This could be: CmsDebtAdmin, CmsDomesticPreLegal, CmsDomesticLegal, CmsSurveillance, CmsForeignPreLegal, CmsForeignLegal, CmsConsultant. For NO version: PreLegal, Collection, Survaillance -->
+                                    <!--Optional:-->
+                                    <cas:AlertDate>2021-08-01</cas:AlertDate>
+                                    <!--Optional:-->
+                                    <cas:ForceNewCase>true</cas:ForceNewCase>
+                                    <!--should be false -->
+                                    <!--Optional:-->
+                                    <!-- <cas:OriginalCreditorName></cas:OriginalCreditorName> -->
+                                    <!--Optional:-->
+                                    <cas:CaseRegarding>
+                                        <!--Zero or more repetitions:-->
+                                        <cas:Note>Case Regarding Note with ÆØÅ  and æøå</cas:Note>
+                                        <!-- Not often used -->
+                                        <!-- Important: This has to be agreed with the Agency if ok to use or not -->
+                                    </cas:CaseRegarding>
+                                </cas:CaseInfo>
+                                <cas:Creditor CreditorNo="555555" />
+                                <!--Important: This have to be agreed with debt collection agency what number to use -->
+                                <cas:Debtor>
+                                    <cas:Subject>
+                                        <cas:Category>Private</cas:Category>
+                                        <!--Optional:-->
+                                        <cas:Account>12341212345</cas:Account>
+                                        <!--Optional:-->
+                                        <cas:PersonalIdentificationCode>1234567892</cas:PersonalIdentificationCode>
+                                        <!--Optional:-->
+                                        <!-- <cas:OrganizationNumber></cas:OrganizationNumber> -->
+                                        <!--Optional:-->
+                                        <!-- <cas:CrmRef>12345</cas:CrmRef> -->
+                                        <!-- Not often used -->
+                                        <!-- Important: This has to be agreed with the Agency if ok to use or not -->
+                                        <cas:Name>
+                                            <cas:LastnameOrCompanyname>Pær Anka</cas:LastnameOrCompanyname>
+                                            <!--Optional:-->
+                                            <cas:Firstname>Kalle øl</cas:Firstname>
+                                        </cas:Name>
+                                        <cas:AddressSet>
+                                            <cas:City>Bromma</cas:City>
+                                            <cas:CountryCode>SE</cas:CountryCode>
+                                            <cas:ZipCode>16800</cas:ZipCode>
+                                            <!--Zero or more repetitions:-->
+                                            <cas:Address>
+                                                <cas:AddressType>Address2</cas:AddressType>
+                                                <!-- This could be: Address1, Address2, Address3, Address4, Email -->
+                                                <cas:AddressLine>Stårgata 1</cas:AddressLine>
+                                            </cas:Address>
+                                            <cas:Address>
+                                                <cas:AddressType>Email</cas:AddressType>
+                                                <cas:AddressLine>debtor@email.com</cas:AddressLine>
+                                            </cas:Address>
+                                        </cas:AddressSet>
+                                        <!--Optional:-->
+                                        <cas:TelephoneSet>
+                                            <!--Zero or more repetitions:-->
+                                            <cas:Telephone>
+                                                <cas:TelephoneType>Mobile</cas:TelephoneType>
+                                                <!-- This could be: Fax, Mobile, Private, Work -->
+                                                <cas:Number>70707070</cas:Number>
+                                            </cas:Telephone>
+                                        </cas:TelephoneSet>
+                                        <!--Optional:-->
+                                        <cas:Birthdate>1990-01-01</cas:Birthdate>
+                                        <!--Optional:-->
+                                        <!-- <cas:VatNumber></cas:VatNumber>-->
+                                    </cas:Subject>
+                                    <!--Optional:-->
+                                    <cas:ForceAddressUpdate>false</cas:ForceAddressUpdate>
+                                    <!-- Important: This has to be agreed with the Agency if ok to use or not -->
+                                </cas:Debtor>
+                                <cas:InvoiceSet>
+                                    <!--One or more repetitions:-->
+                                    <cas:Invoice>
+                                        <cas:InvoiceInfo>
+                                            <cas:InvoiceNo>9988776655441</cas:InvoiceNo>
+                                            <!-- Important: This has to be agreed with the Agency if ok to use or not -->
+                                            <cas:InvoiceDate>2021-08-14</cas:InvoiceDate>
+                                            <!--Optional:-->
+                                            <!-- <cas:VatAmount></cas:VatAmount> -->
+                                            <cas:RemainingCapital>560</cas:RemainingCapital>
+                                            <cas:OriginalAmount>560</cas:OriginalAmount>
+                                            <!--Optional:-->
+
+                                            <cas:InterestFromDate>2021-08-14</cas:InterestFromDate>
+
+                                            <cas:InterestPercent>8</cas:InterestPercent>
+                                            <!-- Important: This has to be agreed with the Agency on how to use. If reference interest then this always have to be 8, else the interestrate for the invoice. -->
+                                            <!--Optional:-->
+                                            <cas:InterestType>7</cas:InterestType>
+
+                                            <cas:CurrencyCode>SEK</cas:CurrencyCode>
+                                            <cas:CurrencyRate>1</cas:CurrencyRate>
+                                            <!--Optional:-->
+                                            <cas:DaysOfCredit>0</cas:DaysOfCredit>
+
+                                            <cas:Description>InvoiceDescription</cas:Description>
+
+                                            <cas:ExternalReference>22334455</cas:ExternalReference>
+
+                                            <cas:InvoiceReference>44335523</cas:InvoiceReference>
+
+                                        </cas:InvoiceInfo>
+                                        <!--Optional:-->
+                                        <cas:InvoiceNoteSet>
+                                            <!--Zero or more repetitions:-->
+                                            <cas:Note>
+                                                <cas:RegistrationDateTime>2021-08-14</cas:RegistrationDateTime>
+                                                <cas:NoteText>This is the specific invoice note.</cas:NoteText>
+                                            </cas:Note>
+                                        </cas:InvoiceNoteSet>
+                                        <cas:InvoiceReceipt>
+                                            <cas:ReferenceNumber>66557788</cas:ReferenceNumber>
+                                            <!--Optional:-->
+                                            <cas:ImportStatus>Invoice</cas:ImportStatus>
+                                            <!--Optional:-->
+                                            <cas:InvoiceNo>998877665544</cas:InvoiceNo>
+                                        </cas:InvoiceReceipt>
+                                    </cas:Invoice>
+                                </cas:InvoiceSet>
+                                <!--Optional:-->
+
+                                <cas:CaseNoteSet>
+                                    <!--Zero or more repetitions:-->
+                                    <cas:Note>
+                                        <cas:RegistrationDateTime>2021-08-14</cas:RegistrationDateTime>
+                                        <cas:NoteText>This is the Case Note.</cas:NoteText>
+                                    </cas:Note>
+                                </cas:CaseNoteSet>
+                            </cas:Case>
+                        </cas:MainCase>
+                    </cas:CaseCollection>
+                </cas:CaseCollectionSet>
+                <cas:Authorization>
+                    <cas:Username>TestAPI</cas:Username>
+                    <cas:Password>Testing123.!</cas:Password>
+                </cas:Authorization>
+            </cas:caseImport>
+        </pred:ImportCasesByProxy>
+    </soapenv:Body>
+</soapenv:Envelope>

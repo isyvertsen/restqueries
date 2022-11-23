@@ -1,0 +1,8 @@
+@mydata ={{$datetime rfc1123|iso8601 [offset option]}}  
+
+{{mydata}}
+
+###
+
+GET https://www.hvakosterstrommen.no/api/v1/prices/2022/11-14_NO2.json
+Accept: application/json

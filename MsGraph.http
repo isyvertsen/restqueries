@@ -1,0 +1,38 @@
+POST https://login.microsoftonline.com/db960ba0-2742-4c76-8c5f-8ab2d4543772/oauth2/v2.0/token
+
+content-type: application/json
+{
+"grant_type": "client_credentials",
+"client_id": "7385ed06-057d-4081-9f87-d6606f11cdba",
+"client_secret": "Qmj7Q~XjpkZiwRTaip2qsvQ-qbEhDupl.B4fS",
+"scope": "https://graph.microsoft.com/.default"
+
+}
+
+
+###
+Post https://login.microsoftonline.com/db960ba0-2742-4c76-8c5f-8ab2d4543772/oauth2/v2.0/token?client_id=7385ed06-057d-4081-9f87-d6606f11cdba&client_secret=Qmj7Q~XjpkZiwRTaip2qsvQ-
+
+Content-Type: application/x-www-form-urlencoded
+{
+"grant_type": "client_credentials",
+"client_id": "7385ed06-057d-4081-9f87-d6606f11cdba",
+"client_secret": "Qmj7Q~XjpkZiwRTaip2qsvQ-qbEhDupl.B4fS",
+"scope": "https://graph.microsoft.com/.default"
+
+}
+
+###
+POST  https://login.microsoftonline.com/db960ba0-2742-4c76-8c5f-8ab2d4543772/oauth2/v2.0/token?client_id=7385ed06-057d-4081-9f87-d6606f11cdba&client_secret=Qmj7Q~XjpkZiwRTaip2qsvQ-qbEhDupl.B4fS&redirect_uri=https://localhost&grant_type=client_credentials HTTP/1.1
+Host: login.microsoftonline.com
+Content-Type: application/x-www-form-urlencoded
+Cookie: esctx=AQABAAAAAAD--DLA3VO7QrddgJg7Wevrj-Ub2vYPb7HF1RO2Lyz6EqXViFiVOP1fs_aXrqcn7ftIPVudWBtQnvMjoBPLMirg6P1GoyEKm5H-Is9X0t4koi9KFkMTYrPAD12i1-L6_zDvd46vui_9JGexLN2TqoDonhbDdduGWDVZD4rztN1eyYEh3by2Mtxp15oxv8QYzvogAA; fpc=Aqv2Fra_6rJHpgGow-k1TQVI8L55AQAAADPEptkOAAAAKj4q-QMAAABDxKbZDgAAAA; stsservicecookie=estsfd; x-ms-gateway-slice=estsfd
+Content-Length: 179
+
+grant_type=client_credentials&client_secret=Qmj7Q~XjpkZiwRTaip2qsvQ-qbEhDupl.B4fS&client_id=7385ed06-057d-4081-9f87-d6606f11cdba&scope=https%3A%2F%2Fgraph.microsoft.com%2F.default
+
+###
+
+
+GET https://graph.microsoft.com/v1.0/db960ba0-2742-4c76-8c5f-8ab2d4543772/mailboxSettings
+Authorization : Bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6ImROc2piVmItdFg4a1hqT0pKXzBWTTJ5bHhlQWM2XzlaaXB6ejNSV2RvWGsiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1yNS1BVWliZkJpaTdOZDFqQmViYXhib1hXMCIsImtpZCI6Ik1yNS1BVWliZkJpaTdOZDFqQmViYXhib1hXMCJ9.eyJhdWQiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kYjk2MGJhMC0yNzQyLTRjNzYtOGM1Zi04YWIyZDQ1NDM3NzIvIiwiaWF0IjoxNjQ1NTMxODY4LCJuYmYiOjE2NDU1MzE4NjgsImV4cCI6MTY0NTUzNTc2OCwiYWlvIjoiRTJaZ1lPRDlka2UySUhBQ2UycDFXWHdzMTljWEFBPT0iLCJhcHBfZGlzcGxheW5hbWUiOiJQb3NtYW4gZGVtbyIsImFwcGlkIjoiNzM4NWVkMDYtMDU3ZC00MDgxLTlmODctZDY2MDZmMTFjZGJhIiwiYXBwaWRhY3IiOiIxIiwiaWRwIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvZGI5NjBiYTAtMjc0Mi00Yzc2LThjNWYtOGFiMmQ0NTQzNzcyLyIsImlkdHlwIjoiYXBwIiwib2lkIjoiMWM3NmJkOGMtZTc0Zi00ODE5LTk2ZWYtZjgzYzZhMzQ4OGU3IiwicmgiOiIwLkFUQUFvQXVXMjBJbmRreU1YNHF5MUZRM2NnTUFBQUFBQUFBQXdBQUFBQUFBQUFBd0FBQS4iLCJyb2xlcyI6WyJNYWlsLlJlYWRXcml0ZSIsIk1haWwuUmVhZEJhc2ljLkFsbCIsIk1haWxib3hTZXR0aW5ncy5SZWFkIiwiVXNlci5SZWFkLkFsbCIsIk1haWwuUmVhZCIsIk1haWwuUmVhZEJhc2ljIl0sInN1YiI6IjFjNzZiZDhjLWU3NGYtNDgxOS05NmVmLWY4M2M2YTM0ODhlNyIsInRlbmFudF9yZWdpb25fc2NvcGUiOiJFVSIsInRpZCI6ImRiOTYwYmEwLTI3NDItNGM3Ni04YzVmLThhYjJkNDU0Mzc3MiIsInV0aSI6IndsUmpFRDNvSUVHbGZkaWFmRWxWQUEiLCJ2ZXIiOiIxLjAiLCJ3aWRzIjpbIjA5OTdhMWQwLTBkMWQtNGFjYi1iNDA4LWQ1Y2E3MzEyMWU5MCJdLCJ4bXNfdGNkdCI6MTUwODM0MjkwMH0.dfpS7F9xywFa1nKV3u_WkbmFemkP5gYWklfZQTD_-1DitDsUiLWYY4YJyhsj4DU65jVRq3qmtPLYfhgiQ192N4PN-qj07UjEtAajlMVdeNZx4sGXCflDpgh27A55eyFqdx-ZhkU-fykQAuQn-ks-wd07mM4-PfICR4SXG0f_s-U4YG0uxtKZbgO7F7DXCPpcYZ2frN8hFNlZH4iMpTEdAZuYR5X7-fKk9nAeEmB5Q0D5iXiXzbCvNpvseL5xtACpL-SUeAoCK06RaSubApKCANoOGZcmu3e6WWW27jKhQ1rA0sKv60iGd98RpMFEaUtioA-qFBVnRAjznGeUXJhJSQ
